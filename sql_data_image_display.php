@@ -75,7 +75,13 @@ if(mysqli_query($conn,$sql)){
 <?php
 $sql2="SELECT * FROM students_info";
 $query=mysqli_query($conn,$sql2);
-echo "<table class='table table-border'> ";
+echo "<table class='table table-border'><tr class='bg-light'>
+<th>ID</th>
+<th>FIRSTNAME</th>
+<th>LASTNAME</th>
+<th>EMAIL</th>
+<th>IMAGE</th>
+<tr> ";
 while($data=mysqli_fetch_assoc($query)){
 $id=$data['id'];
 $firstname=$data['firstname'];
